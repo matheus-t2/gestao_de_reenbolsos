@@ -1,0 +1,43 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.2.0, pluggy-1.7.0 -- /usr/bin/python
+cachedir: .pytest_cache
+rootdir: /home/claude/nexus
+configfile: pytest.ini
+plugins: platformdirs-4.13.0, anyio-4.16.0
+collecting ... collected 33 items
+
+tests/test_cenarios.py::test_cenario_01_acesso_indevido PASSED           [  3%]
+tests/test_cenarios.py::test_cenario_02_gestor_de_outro_departamento PASSED [  6%]
+tests/test_cenarios.py::test_cenario_03_credenciais_incorretas PASSED    [  9%]
+tests/test_cenarios.py::test_cenario_04_tentativa_de_elevacao_de_permissao PASSED [ 12%]
+tests/test_cenarios.py::test_cenario_05_aprovacao_fora_da_sequencia PASSED [ 15%]
+tests/test_cenarios.py::test_cenario_06_manipulacao_apos_envio PASSED    [ 18%]
+tests/test_cenarios.py::test_cenario_07_consulta_com_filtros PASSED      [ 21%]
+tests/test_cenarios.py::test_cenario_08_historico_completo PASSED        [ 24%]
+tests/test_regras.py::test_rn01_requires_authentication PASSED           [ 27%]
+tests/test_regras.py::test_rn14_session_invalidation PASSED              [ 30%]
+tests/test_regras.py::test_rn14_role_change_forces_new_token PASSED      [ 33%]
+tests/test_regras.py::test_login_lockout PASSED                          [ 36%]
+tests/test_regras.py::test_rn02_drafts_private_even_to_manager_and_finance PASSED [ 39%]
+tests/test_regras.py::test_rn03_manager_sees_only_own_department PASSED  [ 42%]
+tests/test_regras.py::test_finance_sees_only_after_manager_approval PASSED [ 45%]
+tests/test_regras.py::test_rn04_rn06_and_input_validation PASSED         [ 48%]
+tests/test_regras.py::test_rn05_duplicate_receipt_per_collaborator PASSED [ 51%]
+tests/test_regras.py::test_rn05_also_on_update_and_after_rejection PASSED [ 54%]
+tests/test_regras.py::test_rn07_edit_delete_only_in_draft_and_only_owner PASSED [ 57%]
+tests/test_regras.py::test_receipt_reference_is_released_when_draft_deleted PASSED [ 60%]
+tests/test_regras.py::test_full_flow_and_closed_states PASSED            [ 63%]
+tests/test_regras.py::test_cannot_submit_twice_or_by_others PASSED       [ 66%]
+tests/test_regras.py::test_finance_rejection_closes_process PASSED       [ 69%]
+tests/test_regras.py::test_rn09_no_self_approval PASSED                  [ 72%]
+tests/test_regras.py::test_rn11_rejection_requires_justification PASSED  [ 75%]
+tests/test_regras.py::test_rn13_credentials_never_exposed_or_stored_in_clear PASSED [ 78%]
+tests/test_regras.py::test_rn15_only_admin_changes_role_or_department_and_it_is_audited PASSED [ 81%]
+tests/test_regras.py::test_password_change_requires_current_password PASSED [ 84%]
+tests/test_regras.py::test_admin_has_no_access_to_reimbursements PASSED  [ 87%]
+tests/test_regras.py::test_filters_by_department_status_and_category PASSED [ 90%]
+tests/test_regras.py::test_audit_chain_tamper_detected_and_admin_only PASSED [ 93%]
+tests/test_regras.py::test_denied_attempts_do_not_change_data_and_are_audited PASSED [ 96%]
+tests/test_regras.py::test_orm_blocks_history_rewrite PASSED             [100%]
+
+============================== 33 passed in 2.19s ==============================
